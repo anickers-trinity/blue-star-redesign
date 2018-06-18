@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------
+# Left Block
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Left Block Content
+--------------------------------------------------------------*/
+.left-block-content {
+    @include grid-width($col-12-width);
+    @include center-block;
+    h2, h3, p {
+        max-width: px($col-6-width);
+        max-width: rem($col-6-width);
+    }
+    color: $black;
+}
+
+/*--------------------------------------------------------------
+# Left Photo Background
+----------- ---------------------------------------------------*/
+.left-photo-bg {
+    background-color: $white;
+    background-image: url('../../assets/images/blue.png');
+    //border: 15px $black solid;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    //color: $brand-color;
+    
+}
+
+h2 {
+    font-weight: 600 !important;
+    color: $orange;
+}
+
+p {
+    font-weight: 300;
+}
+.accordion {
+    background-color: $white;
+    color: $brand-color;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: thick $border-color solid;
+    border-bottom: thin $border-color solid;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.first {
+    border-top: thick $border-color solid;
+}
+
+.last {
+    border-bottom: thin $border-color solid;
+}
+.active, .accordion:hover {
+    color: white;
+    background: url('https://adobe99u.files.wordpress.com/2018/06/99u-01_2480x1840_v1.gif?resize=1240%2C920&quality=100&strip') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.active {
+    border-bottom: thick $border-color solid;
+}
+
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: scroll;
+    transition: max-height 0.2s ease-out;
+    color: black;
+    border: thick $border-color solid;
+    border-top: none;
+    border-bottom: none;
+}
+
+.last2 {
+    border-bottom: thick $border-color solid;
+}

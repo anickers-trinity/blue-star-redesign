@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# Right Block Container
+--------------------------------------------------------------*/
+.right-block-container {
+    @include grid-width($col-12-width);
+    @include center-block;
+    @include clearfix;
+}
+
+/*--------------------------------------------------------------
+# Right Block Content
+--------------------------------------------------------------*/
+.right-block-content {
+    @include grid-width($col-9-width);
+    @include floating-right;
+}
+
+/*--------------------------------------------------------------
+# Right Photo Background
+--------------------------------------------------------------*/
+.right-photo-bg {
+    background-color: $white;
+    background-image: url('../../assets/images/blue.png');
+    //border: 15px $black solid;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    color: $black;
+}

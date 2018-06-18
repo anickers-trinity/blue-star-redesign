@@ -1,0 +1,46 @@
+/*--------------------------------------------------------------
+# Hero Block
+--------------------------------------------------------------*/
+.hero-block {
+    background-image: url('https://adobe99u.files.wordpress.com/2018/06/99u-01_2480x1840_v1.gif?resize=1240%2C920&quality=100&strip');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    text-align: center;
+    &:before {
+        background-color: rgba($secondary-bg-color, 0.15);
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Hero Block Content
+--------------------------------------------------------------*/
+
+.hero-block-content {
+    @include grid-width($col-9-width);
+    @include center-block;
+    h1 {
+        @include typeset(35 * $vertical-rhythm-multiple, 40 * $vertical-rhythm-multiple);
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    p {
+        @include center-block;
+        @include grid-width($col-10-width);
+        @include typeset($header-3-size, 14 * $vertical-rhythm-multiple);
+        color: $white;
+        font-weight: 600;
+    }
+    .button {
+        font-size: px($header-4-size);
+        font-size: rem($header-4-size);
+    }
+}
