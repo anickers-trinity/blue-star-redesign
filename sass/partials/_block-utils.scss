@@ -1,0 +1,46 @@
+/*--------------------------------------------------------------
+# Marcomm Content
+--------------------------------------------------------------*/
+.marcomm-content {
+    h2 {
+        @include typeset($header-1-size, 15 * $vertical-rhythm-multiple);
+        font-weight: 300;
+    }
+    .center-cta {
+        text-align: center;
+    }
+}
+
+/*--------------------------------------------------------------
+# Light Background
+--------------------------------------------------------------*/
+.light-bg {
+    background-color: $light-bg-color;
+}
+
+/*--------------------------------------------------------------
+# Dark Background
+--------------------------------------------------------------*/
+.dark-bg {
+    //background-color: $dark-bg-color;
+    color: $white;
+    background: url('https://adobe99u.files.wordpress.com/2018/06/99u-01_2480x1840_v1.gif?resize=1240%2C920&quality=100&strip') no-repeat;
+    background-size: cover;
+}
+
+/*--------------------------------------------------------------
+# Photo Background
+--------------------------------------------------------------*/
+.photo-bg {
+    color: $white;
+    &:before {
+        background-color: rgba($white, 0.3);
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

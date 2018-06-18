@@ -1,0 +1,59 @@
+/*--------------------------------------------------------------
+# Center Block
+--------------------------------------------------------------*/
+.center-block {
+    background-color: $white;
+    text-align: center;
+    h2 {
+        color: $orange;
+        text-align: left;
+    }
+    
+    p {
+        text-align: left;
+        @include breakpoint(460) {
+            text-align: left;
+            
+        }
+        color: $black;
+        font-weight: 300;
+    }
+    img {
+        @include center-block;
+        width: 100%;
+        
+    }
+}
+
+.dark-bg.center-block {
+    h2 {
+        color: $white;
+    }
+}
+
+/*--------------------------------------------------------------
+# Center Block Content
+--------------------------------------------------------------*/
+.center-block-content {
+    @include grid-width($col-12-width);
+    @include center-block;
+}
+
+.press {
+        text-align: center !important;
+    }
+.southtown {
+    background-image: url('https://9qejp4s8bwnqrf4s-zippykid.netdna-ssl.com/wp-content/uploads/2017/03/Southtown-825x510.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    
+}
+
+.businesses {
+    background-image: url('https://s.hdnux.com/photos/25/15/16/5559176/3/rawImage.jpg');
+    height: 20%;
+    background-size: cover;
+    background-position: top;
+    min-height: 300px;
+}
