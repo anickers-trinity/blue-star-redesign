@@ -54,6 +54,7 @@ sass/
 /*--------------------------------------------------------------
 # Floats and Alignments
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:900");
 .clear::after {
   clear: both;
   content: "";
@@ -1478,7 +1479,7 @@ hr {
   text-align: center;
 }
 .hero-block:before {
-  background-color: rgba(18, 58, 85, 0.15);
+  background-color: rgba(18, 58, 85, 0.3);
   content: "";
   display: block;
   height: 100%;
@@ -1501,25 +1502,23 @@ hr {
 .hero-block-content h1 {
   font-size: 105px;
   font-size: 6.5625rem;
-  line-height: 1.1428571429;
+  line-height: 0.8857142857;
   font-weight: 900;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
 }
 .hero-block-content p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 996px;
-  max-width: 62.25rem;
-  font-size: 25px;
-  font-size: 1.5625rem;
-  line-height: 1.68;
+  max-width: 690px;
+  max-width: 43.125rem;
+  font-size: 31px;
+  font-size: 1.9375rem;
+  line-height: 1.1129032258;
   color: #fff;
-  font-weight: 600;
-}
-.hero-block-content .button, .hero-block-content .primary-button, .hero-block-content .secondary-button {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 /*--------------------------------------------------------------
@@ -1664,8 +1663,8 @@ hr {
   color: #000;
 }
 .left-block-content h2, .left-block-content h3, .left-block-content p {
-  max-width: 588px;
-  max-width: 36.75rem;
+  max-width: 894px;
+  max-width: 55.875rem;
 }
 
 /*--------------------------------------------------------------
@@ -1676,7 +1675,7 @@ hr {
   background-image: url("../../assets/images/blue.png");
   background-position: right;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: contain;
 }
 
 h2 {
@@ -1686,58 +1685,6 @@ h2 {
 
 p {
   font-weight: 300;
-}
-
-.accordion {
-  background-color: #fff;
-  color: #0076bd;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: thick #000 solid;
-  border-bottom: thin #000 solid;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-  font-size: 2em;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.first {
-  border-top: thick #000 solid;
-}
-
-.last {
-  border-bottom: thin #000 solid;
-}
-
-.active, .accordion:hover {
-  color: white;
-  background: url("https://adobe99u.files.wordpress.com/2018/06/99u-01_2480x1840_v1.gif?resize=1240%2C920&quality=100&strip") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.active {
-  border-bottom: thick #000 solid;
-}
-
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: scroll;
-  transition: max-height 0.2s ease-out;
-  color: black;
-  border: thick #000 solid;
-  border-top: none;
-  border-bottom: none;
-}
-
-.last2 {
-  border-bottom: thick #000 solid;
 }
 
 /*--------------------------------------------------------------
@@ -1824,6 +1771,12 @@ p {
   font-weight: 600;
   margin-top: 6px;
   margin-top: 0.375rem;
+}
+
+.hscroll {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
 }
 
 /*--------------------------------------------------------------
@@ -2036,6 +1989,57 @@ p {
   content: "";
   display: block;
   font-family: "Sparkicons";
+}
+
+.accordion {
+  max-width: 1200px;
+  max-width: 75rem;
+  background-color: #fff;
+  color: #0076bd;
+  cursor: pointer;
+  padding: 18px;
+  width: 75%;
+  border-bottom: thin #000 solid;
+  outline: none;
+  transition: 0.4s;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.active, .accordion:hover {
+  color: white;
+  background: url("../../assets/images/background.gif") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: scroll;
+  transition: max-height 0.2s ease-out;
+  color: black;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion:after {
+  content: "➕";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: pink;
+  float: left;
+  margin-right: 5px;
+}
+
+.active:after {
+  content: "➖";
+  /* Unicode character for "minus" sign (-) */
 }
 
 /*# sourceMappingURL=assets/css/main.min.css.map */

@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 # Hero Block
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:900');
+
 .hero-block {
     background-image: url('https://adobe99u.files.wordpress.com/2018/06/99u-01_2480x1840_v1.gif?resize=1240%2C920&quality=100&strip');
     background-position: 50% 50%;
@@ -9,7 +12,7 @@
     color: $white;
     text-align: center;
     &:before {
-        background-color: rgba($secondary-bg-color, 0.15);
+        background-color: rgba($secondary-bg-color, 0.3);
         content: '';
         display: block;
         height: 100%;
@@ -28,19 +31,17 @@
     @include grid-width($col-9-width);
     @include center-block;
     h1 {
-        @include typeset(35 * $vertical-rhythm-multiple, 40 * $vertical-rhythm-multiple);
+        @include typeset(35 * $vertical-rhythm-multiple, 31 * $vertical-rhythm-multiple);
         font-weight: 900;
+        letter-spacing: 2.5px;
         text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
     }
     p {
         @include center-block;
-        @include grid-width($col-10-width);
-        @include typeset($header-3-size, 14 * $vertical-rhythm-multiple);
+        @include grid-width($col-7-width);
+        @include typeset($header-2-size, 11.5 * $vertical-rhythm-multiple);
         color: $white;
-        font-weight: 600;
-    }
-    .button {
-        font-size: px($header-4-size);
-        font-size: rem($header-4-size);
+        font-weight: 300;
     }
 }
